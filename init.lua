@@ -378,3 +378,15 @@ local path = minetest.get_worldpath().."/ranks.lua"
 if io.open(path) then
 	dofile(path)
 end
+
+minetest.register_on_newplayer(function(player)
+	minetest.chat_send_all("¡Todos, demosle la bienvenida a "..player:get_player_name().."!")
+        
+		local user =player:get_player_name()
+		local rango = ranks.get_rank(user)
+		if rango == nil then
+			ranks.set_rank(user, "noob")
+		end
+		
+
+end)
