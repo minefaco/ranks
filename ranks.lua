@@ -15,7 +15,14 @@ ranks.register("guardian", {
 	colour = {a = 255, r = 255, g = 132, b = 0},
 })
 
-ranks.register("youtube", {
-	prefix = "YouTube",
-	colour = {a = 255, r = 255, g = 80, b = 71},
-})
+ranks.register("noob", {
+	prefix = "Novat@",
+	colour = {a = 255, r = 251, g = 255, b = 0},
+	strict_privs = true,
+	grant_missing = true,
+	revoke_extra = true,
+	privs = { -- Privs que tiene el rango.
+		interact = true,
+		home = true,
+		shout = true,	
+	}
